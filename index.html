@@ -62,21 +62,24 @@ layout: homepage
           <cite>Lis A.</cite>
         </li>
         <li>
-        <blockquote>One of my daughters worked with Bulent on piano and enjoyed every minute. She looked forward to every lesson and felt compelled to learn more. Bulent always went above and beyond, working on technique and voice. Voice was an unexpected but terrific benefit for my daughter. Bulent gave her the confidence through trust and play to feel comfortable with performing. As a teacher, he was unable to turn away an eager child. He pleasantly allowed my other daughter to sit in and work with her sister, always kind, encouraging and professional. It was a pleasure having my children work with Bulent and I would happily recommend his expertise to those who are interested.</blockquote>
+        <blockquote>One of my daughters worked with Bulent on piano and enjoyed every minute. She looked forward to every lesson and felt compelled to learn more. Bulent always went above and beyond, working on technique and voice... Bulent gave her the confidence through trust and play to feel comfortable with performing.</blockquote>
         <cite>Sharon P.</cite>
       </ul>
     </section>
   </div>
 </section>
 
-<section id="performing">
+<section id="performances">
   <div class="grid">
-    <h2>Performing</h2>
+    <h2>Performances</h2>
     <ul>
-      <li><iframe width="420" height="315" src="//www.youtube.com/embed/XIqYSdTTNvw" frameborder="0" allowfullscreen></iframe></li>
-      <li><iframe width="420" height="315" src="//www.youtube.com/embed/EDW_aljLYOs" frameborder="0" allowfullscreen></iframe></li>
-      <li><iframe width="420" height="315" src="//www.youtube.com/embed/o8spbalsSQE" frameborder="0" allowfullscreen></iframe></li>
-      <li><iframe width="560" height="315" src="//www.youtube.com/embed/L_VHjojwPw0" frameborder="0" allowfullscreen></iframe></li>
+      {% for performance in site.data.performances %}
+        <li>
+          <div class="video-wrapper">
+            <iframe src="{{ performance.url }}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </li>
+      {% endfor %}
     </ul>
     <a href="https://www.youtube.com/user/bulentguneralp">See more videos on YouTube</a>
   </div>
@@ -121,14 +124,19 @@ layout: homepage
     <h2>Lessons</h2>
     <div class="narrow">
       <p>Get taught by a student favorite in the Boston area. Lessons are open to students from all backgrounds and genres.</p>
-      <p class="location-description">Conveniently located in Somerville, a ten minute walk from Davis Square and Porter Square.</p>
-      <p class="location-map"><img src="/assets/location.png" alt="Location" /></p>
+
+      <ul class="pricing">
+        <li><div class="price">$30</div> 30 minutes</li>
+        <li><div class="price">$60</div> 60 minutes</li>
+        <li><div class="price">Custom</div> Set your own time</li>
+      </ul>
+
+      <h3>Studio</h3>
+      <div class="location">
+        <p class="description">Conveniently located in Somerville, a ten minute walk from Davis Square and Porter Square.</p>
+        <p class="map"><img src="/assets/location.png" alt="Location" /></p>
+      </div>
+      <div class="contact">Get in touch. {{ site.email }}</div>
     </div>
-    <ul>
-      <li><div class="price">$30</div> 30 minutes</li>
-      <li><div class="price">$60</div> 60 minutes</li>
-      <li><div class="price">Custom</div> Set your own time</li>
-    </ul>
-    <p>{{ site.email }}</p>
   </div>
 </section>
