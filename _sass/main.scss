@@ -62,6 +62,16 @@ h3 {
   @include button;
 }
 
+header .links,
+footer .links {
+  li {
+    display: inline-block;
+    a {
+      margin-right: 1em;
+    }
+  }
+}
+
 footer {
   color: #888;
   a { color: #888; }
