@@ -3,7 +3,7 @@ $max-width: 50em;
 @import "neat/neat";
 @import "bitters/bitters";
 
-$borderColor: #ddd;
+$borderColor: #ccc;
 $headerColor: darken(#c29133, 10%);
 $linkColor: #2c5999;
 
@@ -189,7 +189,12 @@ body > section {
   .contact {
     text-align: center;
     padding: 2em 0;
-    border: 1px solid $borderColor;
+    border: 1px solid $linkColor;
     border-radius: 10px;
+    background: #f8f8f8;
+    a {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
   }
 }
