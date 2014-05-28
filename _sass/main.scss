@@ -3,6 +3,7 @@
 @import "bitters/bitters";
 
 $borderColor: #ddd;
+$headerColor: darken(#c29133, 10%);
 
 body {
   margin: 0;
@@ -12,15 +13,15 @@ h1 {
   font-family: 'Great Vibes', sans-serif;
   font-size: 6em;
   a {
-    color: darken(#c29133, 10%);
+    color: $headerColor;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
   }
 }
+
 h2 {
   font-family: 'Lora', sans-serif;
-  font-size: 1.4em;
-  text-transform: uppercase;
+  color: darken($headerColor, 15%);
 }
 
 .grid {
@@ -34,7 +35,7 @@ footer .grid {
   border-top: 1px solid $borderColor;
 }
 
-section {
+body > section {
   padding: 2em 0;
 }
 
@@ -43,4 +44,12 @@ section {
   padding: 12em 0;
   background: url("/assets/background.jpg") center center no-repeat;
   background-size: cover;
+}
+#testimonials {
+  ul {
+    @include clearfix;
+    li {
+      @include span-columns(4);
+    }
+  }
 }
