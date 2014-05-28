@@ -6,6 +6,7 @@ $max-width: 50em;
 $borderColor: #ccc;
 $headerColor: darken(#c29133, 10%);
 $linkColor: #2c5999;
+$backgroundColor: #efefef;
 
 @mixin button($color: $linkColor) {
   color: $color;
@@ -57,6 +58,9 @@ h3 {
   margin-top: 2em;
   text-align: center;
 }
+.button {
+  @include button;
+}
 
 footer {
   color: #888;
@@ -99,8 +103,23 @@ body > section {
     }
   }
 }
+#teaching {
+  background: $backgroundColor;
+}
 #reviews {
-  background: #efefef;
+  background: $backgroundColor;
+
+  .description {
+    color: #666;
+    font-size: 1.2em;
+  }
+  .rating {
+    font-size: 2em;
+    color: #ffba1c;
+  }
+  .grid {
+    text-align: center;
+  }
 }
 #testimonials {
   section {
@@ -121,7 +140,7 @@ body > section {
   }
 }
 #experience {
-  background: #efefef;
+  background: $backgroundColor;
   h3 {
     text-align: center;
     margin-bottom: 1em;
@@ -160,9 +179,6 @@ body > section {
         }
       }
     }
-  }
-  .callout a {
-    @include button;
   }
 }
 #lessons {
