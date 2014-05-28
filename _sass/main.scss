@@ -27,9 +27,14 @@ h2 {
   color: darken($headerColor, 15%);
 }
 
+h3 {
+  font-size: 1.3em;
+}
+
 .grid {
   @include outer-container;
   h2 {
+    margin-bottom: 1.5em;
     text-align: center;
   }
 }
@@ -53,9 +58,20 @@ body > section {
   background-size: cover;
 }
 #testimonials {
+  h3 {
+    text-align: center;
+  }
   ul {
     @include clearfix;
     li {
+      @include span-columns(6);
+    }
+  }
+}
+#experience {
+  .grid > ul {
+    @include clearfix;
+    > li {
       @include span-columns(4);
     }
   }
