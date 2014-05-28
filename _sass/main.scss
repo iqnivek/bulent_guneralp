@@ -4,10 +4,43 @@
 
 $borderColor: #ddd;
 
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Great Vibes', sans-serif;
+  font-size: 6em;
+  a {
+    color: darken(#c29133, 10%);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+  }
+}
+h2 {
+  font-family: 'Lora', sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
 .grid {
   @include outer-container;
+  h2 {
+    text-align: center;
+  }
 }
 
 footer .grid {
   border-top: 1px solid $borderColor;
+}
+
+section {
+  padding: 2em 0;
+}
+
+/* Homepage */
+#overview {
+  padding: 12em 0;
+  background: url("/assets/background.jpg") center center no-repeat;
+  background-size: cover;
 }
