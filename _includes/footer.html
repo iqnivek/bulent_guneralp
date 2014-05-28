@@ -1,6 +1,7 @@
 <footer>
   <div class="grid">
-    <p>{{ site.title }}</p>
-    <p>{{ site.email }}</p>
+    <div class="logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></div>
+
+    {% include links.html %}
   </div>
 </footer>

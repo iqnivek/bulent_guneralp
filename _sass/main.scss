@@ -58,8 +58,17 @@ h3 {
   text-align: center;
 }
 
-footer .grid {
-  border-top: 1px solid $borderColor;
+footer {
+  color: #888;
+  a { color: #888; }
+  .grid {
+    border-top: 1px solid $borderColor;
+    padding: 3em 0;
+  }
+  .logo {
+    font-size: 2em;
+    font-family: 'Great Vibes', sans-serif;
+  }
 }
 
 body > section {
@@ -189,9 +198,12 @@ body > section {
   .contact {
     text-align: center;
     padding: 2em 0;
-    border: 1px solid $linkColor;
+    border: 1px solid $borderColor;
     border-radius: 10px;
     background: #f8f8f8;
+    p:last-child {
+      margin-bottom: 0;
+    }
     a {
       font-size: 1.2em;
       font-weight: bold;

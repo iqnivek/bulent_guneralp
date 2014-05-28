@@ -10,11 +10,7 @@ layout: homepage
       <p>{{ site.description }}</p>
     </div>
 
-    <ul class="links">
-      <li><a href="/lessons">Lessons</a></li>
-      <li><a href="/performances">Performances</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
+    {% include links.html %}
   </div>
 </section>
 
@@ -143,11 +139,11 @@ layout: homepage
       </ul>
 
       <div class="location">
-        <p class="description">My studio is conveniently located in Somerville, a ten minute walk from Davis Square and Porter Square Red Line stations.</p>
+        <p class="description">My studio is conveniently located in Somerville, a ten minute walk from both Davis and Porter Square T stations.</p>
         <p class="map"><img src="/assets/location.png" alt="Location" /></p>
       </div>
       <div class="contact">
-        <p>Send me an email and we can schedule a lesson.</p>
+        <p>Send me an email and we can schedule your first lesson.</p>
         <p><a href="mailto:{{ site.email }}?subject=interested in lessons">{{ site.email }}</a></p>
       </div>
     </div>
