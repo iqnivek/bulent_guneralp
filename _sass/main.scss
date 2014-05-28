@@ -110,6 +110,10 @@ body > section {
     @include clearfix;
     > li {
       @include span-columns(4);
+      ul {
+        font-size: 0.8em;
+        line-height: 1.4;
+      }
     }
   }
 }
