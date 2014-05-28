@@ -1,15 +1,15 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
 $sans-serif: $helvetica;
-$serif: $georgia;
+$serif: 'Lora';
 
-$base-font-family: $sans-serif;
+$base-font-family: $serif;
 $header-font-family: $base-font-family;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
-$base-font-size: 1em;
-$base-line-height: $base-font-size * 1.5;
+$base-font-size: 1.2em;
+$base-line-height: $base-font-size * 1.35;
 $base-border-radius: em(3);
 
 // Colors
