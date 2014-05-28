@@ -73,9 +73,13 @@ body > section {
   background-size: cover;
 
   .summary {
+    @include clearfix;
     font-size: 1.2em;
     color: #fff;
     padding: 1em 0;
+    p {
+      @include span-columns(8);
+    }
   }
 
   .links {
@@ -90,6 +94,12 @@ body > section {
   background: #efefef;
 }
 #testimonials {
+  section {
+    margin-bottom: 3em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   h3 {
     text-align: center;
   }
