@@ -1,3 +1,13 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "bitters/bitters";
+
+$borderColor: #ddd;
+
+.grid {
+  @include outer-container;
+}
+
+footer .grid {
+  border-top: 1px solid $borderColor;
+}
