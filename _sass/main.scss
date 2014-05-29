@@ -8,16 +8,22 @@ $headerColor: darken(#c29133, 10%);
 $linkColor: #2c5999;
 $backgroundColor: #efefef;
 
-@mixin button($color: $linkColor) {
+@mixin button($color: $linkColor, $hoverColor: #fff, $hoverBackground: $linkColor) {
+  display: inline-block;
   color: $color;
   padding: 0.5em 1.5em;
   border: 1px solid $color;
   border-radius: 4px;
-  a {
-    color: $color;
+
+  &:hover {
+    color: $hoverColor;
+    background: $hoverBackground;
   }
 }
-
+@mixin strongHighlight {
+  font-weight: normal;
+  background: rgba(#fffe99, 0.4);
+}
 @mixin textStroke($color) {
   text-shadow: -1px 0 $color, 0 1px $color, 1px 0 $color, 0 -1px $color;
 }
@@ -110,9 +116,11 @@ body > section {
 
   .links {
     li {
-      @include button(#fff);
       display: inline-block;
       margin-right: 0.5em;
+      a {
+        @include button(#fff, $linkColor, #fff);
+      }
     }
   }
 }
@@ -128,6 +136,7 @@ body > section {
   }
   .rating {
     font-size: 2em;
+    margin-bottom: 0.5em;
     color: #ffba1c;
   }
   .grid {
@@ -151,8 +160,7 @@ body > section {
       @include omega(2n);
     }
     strong {
-      font-weight: normal;
-      background: lighten(#fffe99, 10%);
+      @include strongHighlight;
     }
   }
 }
@@ -168,7 +176,13 @@ body > section {
       @include span-columns(4);
       ul {
         font-size: 0.8em;
-        line-height: 1.4;
+        line-height: 1.3;
+        li {
+          margin-bottom: 0.5em;
+        }
+        strong {
+          @include strongHighlight;
+        }
       }
     }
   }
