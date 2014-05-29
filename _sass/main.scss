@@ -18,6 +18,10 @@ $backgroundColor: #efefef;
   }
 }
 
+@mixin textStroke($color) {
+  text-shadow: -1px 0 $color, 0 1px $color, 1px 0 $color, 0 -1px $color;
+}
+
 body {
   margin: 0;
 }
@@ -26,9 +30,8 @@ h1 {
   font-family: 'Great Vibes', sans-serif;
   font-size: 5em;
   a {
+    @include textStroke(#fff);
     color: $headerColor;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
   }
 }
 
