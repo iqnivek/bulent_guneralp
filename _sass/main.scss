@@ -89,12 +89,18 @@ blockquote {
 
 header .links,
 footer .links {
+  @include span-columns(6);
+  text-align: right;
   li {
     display: inline-block;
     a {
       margin-right: 1em;
     }
   }
+}
+header .logo,
+footer .logo {
+  @include span-columns(6);
 }
 
 footer {
