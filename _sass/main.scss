@@ -309,3 +309,22 @@ body > section {
     }
   }
 }
+#contact {
+  .contact-info {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  section {
+    h3 {
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
+    @include span-columns(6);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+}
