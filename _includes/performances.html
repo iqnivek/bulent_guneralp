@@ -1,0 +1,17 @@
+<section id="performances">
+  <div class="grid">
+    <h2>Performances</h2>
+    <ul>
+      {% for performance in site.data.performances %}
+        <li>
+          <div class="video-wrapper">
+            <iframe src="{{ performance.url }}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="callout">
+      <a class="button" href="https://www.youtube.com/user/bulentguneralp">See more videos on YouTube</a>
+    </div>
+  </div>
+</section>
