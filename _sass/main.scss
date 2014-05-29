@@ -38,6 +38,9 @@ h1 {
   a {
     @include textStroke(#fff);
     color: $headerColor;
+    &:hover {
+      color: darken($headerColor, 5%);
+    }
   }
 }
 
@@ -89,8 +92,13 @@ blockquote {
 
 header .links,
 footer .links {
-  @include span-columns(6);
+  @include span-columns(8);
   text-align: right;
+  @include media($mobile) {
+    @include span-columns(4);
+    text-align: center;
+  }
+
   li {
     display: inline-block;
     a {
@@ -103,7 +111,11 @@ footer .links {
 }
 header .logo,
 footer .logo {
-  @include span-columns(6);
+  @include span-columns(4);
+  @include media($mobile) {
+    @include span-columns(4);
+    text-align: center;
+  }
   font-size: 2em;
   font-family: 'Great Vibes', sans-serif;
 }
