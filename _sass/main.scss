@@ -94,13 +94,31 @@ footer .links {
   li {
     display: inline-block;
     a {
-      margin-right: 1em;
+      margin-right: 1.5em;
+      &:hover {
+        border-bottom: 1px solid;
+      }
     }
   }
 }
 header .logo,
 footer .logo {
   @include span-columns(6);
+  font-size: 2em;
+  font-family: 'Great Vibes', sans-serif;
+}
+header {
+  background: $headerColor;
+  color: #fff;
+  a {
+    color: #fff;
+    &:hover { color: #fff; }
+  }
+
+  .grid {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
 }
 
 footer {
@@ -110,10 +128,6 @@ footer {
     border-top: 1px solid $borderColor;
     padding-top: 3em;
     padding-bottom: 3em;
-  }
-  .logo {
-    font-size: 2em;
-    font-family: 'Great Vibes', sans-serif;
   }
 }
 
