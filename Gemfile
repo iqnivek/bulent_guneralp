@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 gem 'jekyll'
 gem 'jekyll-compass'
 
-gem 'sass', '3.2'
+gem 'sass', '3.2.7'
 gem 'bourbon', '~> 3.2'
 gem 'bitters'
 gem 'neat', '1.5'
