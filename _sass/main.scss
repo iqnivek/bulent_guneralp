@@ -150,6 +150,10 @@ body > section {
       @include span-columns(6);
       @include omega(2n);
     }
+    strong {
+      font-weight: normal;
+      background: lighten(#fffe99, 10%);
+    }
   }
 }
 #experience {
@@ -197,7 +201,7 @@ body > section {
 #lessons {
   .pricing {
     @include clearfix;
-    margin-bottom: 1em;
+    margin: 1.5em 0;
     > li {
       @include span-columns(4);
       text-align: center;
@@ -226,7 +230,7 @@ body > section {
   }
   .contact {
     text-align: center;
-    padding: 2em 0;
+    padding: 2em;
     border: 1px solid $borderColor;
     border-radius: 10px;
     background: #f8f8f8;
