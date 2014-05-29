@@ -50,6 +50,13 @@ h2 {
 
 h3 {
   font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+blockquote {
+  margin: 0;
+  margin-bottom: 0.5em;
+  border: 0;
 }
 
 .grid {
@@ -158,6 +165,7 @@ body > section {
     li {
       @include span-columns(6);
       @include omega(2n);
+      margin-bottom: 1.5em;
     }
     strong {
       @include strongHighlight;
@@ -168,7 +176,6 @@ body > section {
   background: $backgroundColor;
   h3 {
     text-align: center;
-    margin-bottom: 1em;
   }
   .grid > ul {
     @include clearfix;
