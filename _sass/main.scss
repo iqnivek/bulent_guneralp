@@ -169,9 +169,19 @@ body > section {
 
 /* Homepage */
 #overview {
-  padding: 12em 0;
+  padding: 0;
   background: url("/assets/background.jpg") center center no-repeat;
   background-size: cover;
+
+  .overlay {
+    padding: 12em 2em;
+    background: rgba($headerColor, 0.3);
+    text-align: center;
+    @include span-columns(8);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
 
   .summary {
     @include clearfix;
@@ -179,10 +189,6 @@ body > section {
     color: #fff;
     padding: 1em 0;
     p {
-      @include span-columns(8);
-      @include media($mobile) {
-        @include span-columns(4);
-      }
     }
   }
 
