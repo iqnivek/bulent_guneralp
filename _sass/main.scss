@@ -312,7 +312,7 @@ body > section {
 #lessons {
   .pricing {
     @include clearfix;
-    margin: 1.5em 0;
+    margin: 1.5em 0 1em;
     > li {
       @include span-columns(4);
       text-align: center;
@@ -321,6 +321,12 @@ body > section {
       padding-top: 1em;
       padding-bottom: 1em;
     }
+  }
+  .pricing-detail {
+    color: #888;
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 1em;
   }
   h3 {
     text-align: center;
