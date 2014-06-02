@@ -66,6 +66,12 @@ blockquote {
   margin-bottom: 0.5em;
   padding: 0;
   border: 0;
+  &:before {
+    content: '“'; /* &ldquo; */
+  }
+  &:after {
+    content: '”'; /* &rdquo; */
+  }
 }
 
 .grid {
