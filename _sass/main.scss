@@ -34,7 +34,12 @@ body {
 
 h1 {
   font-family: 'Great Vibes', sans-serif;
-  font-size: 5em;
+  font-size: 4.5em;
+  line-height: 1;
+  @include media($mobile) {
+    font-size: 3.5em;
+  }
+
   a {
     @include textStroke(#fff);
     color: $headerColor;
@@ -174,6 +179,7 @@ body > section {
   background-size: cover;
 
   .overlay {
+    box-sizing: border-box;
     padding: 12em 2em;
     background: rgba($headerColor, 0.3);
     text-align: center;
@@ -188,8 +194,6 @@ body > section {
     font-size: 1.2em;
     color: #fff;
     padding: 1em 0;
-    p {
-    }
   }
 
   .links {
