@@ -141,6 +141,14 @@ footer {
     padding-top: 3em;
     padding-bottom: 3em;
   }
+  .external-links {
+    @include span-columns(12);
+    li {
+      display: inline-block;
+    }
+    text-align: center;
+    font-size: 1.4em;
+  }
 }
 
 body > section {
