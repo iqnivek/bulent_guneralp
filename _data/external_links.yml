@@ -1,7 +1,13 @@
-- url: "https://twitter.com/bulentguneralp"
-  icon: "fa-twitter"
-  name: "twitter"
+contact:
+  - url: "https://twitter.com/bulentguneralp"
+    icon: "fa-twitter"
+    name: "twitter"
 
-- url: "https://www.facebook.com/guneralp"
-  icon: "fa-facebook-square"
-  name: "facebook"
+  - url: "https://www.facebook.com/guneralp"
+    icon: "fa-facebook-square"
+    name: "facebook"
+
+content:
+  - url: "https://www.youtube.com/user/bulentguneralp"
+    icon: "fa-youtube"
+    name: "youtube"

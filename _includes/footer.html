@@ -5,9 +5,11 @@
     {% include links.html %}
 
     <ul class="external-links">
-      <li><a href="https://twitter.com/bulentguneralp"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="https://www.youtube.com/user/bulentguneralp"><i class="fa fa-youtube"></i></a></li>
-      <li><a href="https://www.facebook.com/guneralp"><i class="fa fa-facebook-square"></i></a></li>
+      {% for category in site.data.external_links %}
+        {% for item in category[1] %}
+          <li><a href="{{ item.url }}" target="_blank"><i class="fa {{ item.icon }}"></i></a></li>
+        {% endfor %}
+      {% endfor %}
     </ul>
   </div>
 </footer>
