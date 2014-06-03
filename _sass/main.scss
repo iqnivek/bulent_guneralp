@@ -320,6 +320,18 @@ body > section {
     }
   }
 }
+#press {
+  section {
+    @include span-columns(6);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    li {
+      margin-bottom: 2em;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+}
 #lessons {
   .pricing {
     @include clearfix;
