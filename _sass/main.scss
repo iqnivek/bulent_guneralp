@@ -42,9 +42,9 @@ h1 {
 
   a {
     @include textStroke(#fff);
-    color: $headerColor;
+    color: darken($headerColor, 5%);
     &:hover {
-      color: darken($headerColor, 5%);
+      color: $headerColor;
     }
   }
 }
@@ -192,7 +192,7 @@ body > section {
 
   .overlay {
     box-sizing: border-box;
-    background: rgba($headerColor, 0.3);
+    background: rgba($headerColor, 0.6);
     text-align: center;
     @include span-columns(8);
     padding: 12em 2em;
