@@ -210,6 +210,10 @@ body > section {
   }
 
   .links {
+    a {
+      color: #fff;
+      border-bottom: 1px solid;
+    }
     li {
       display: inline-block;
       @include media($mobile) {
@@ -217,9 +221,6 @@ body > section {
       }
       margin-right: 0.5em;
       margin-bottom: 0.5em;
-      a {
-        @include button(#fff, $linkColor, #fff);
-      }
     }
   }
 }
