@@ -211,9 +211,13 @@ body > section {
   }
 
   .links {
+    font-size: 1.2em;
     a {
       color: #fff;
       border-bottom: 1px solid;
+      &:hover {
+        color: #eee;
+      }
     }
     li {
       display: inline-block;
