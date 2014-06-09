@@ -5,3 +5,19 @@ permalink: /testimonials/
 ---
 
 {% include testimonials.html %}
+
+<section class="testimonials">
+  <div class="grid">
+    <section>
+      <h3>More Quotes</h3>
+      <ul>
+        {% for quote in site.data.testimonials %}
+          <li>
+            <blockquote>{{ quote.quote }}</blockquote>
+            <cite>{{ quote.cite }}</cite>
+          </li>
+          {% endfor %}
+      </ul>
+    </section>
+  </div>
+</section>
