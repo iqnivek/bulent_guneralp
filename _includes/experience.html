@@ -31,6 +31,18 @@
         </ul>
       </li>
     </ul>
+
+    <h2>Awards</h2>
+    <ul class="awards">
+      {% for award in site.data.awards %}
+        <li>
+          <p><strong>{{ award.title }}</strong></p>
+          <p>{{ award.granted_by }}</p>
+          <p class="date">{{ award.date }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+
     <div class="callout"><a class="button" href="/assets/bulent_guneralp_resume.pdf">See resume</a></div>
   </div>
 </section>
