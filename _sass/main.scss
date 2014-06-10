@@ -101,41 +101,14 @@ blockquote {
   @include button;
 }
 
-header .links,
-footer .links {
-  @include span-columns(8);
-  @include omega();
-  text-align: right;
-  @include media($mobile) {
-    @include span-columns(4);
-    text-align: center;
-  }
-
-  li {
-    display: inline-block;
-    a {
-      margin-right: 1.5em;
-      &:hover {
-        border-bottom: 1px solid;
-      }
-    }
-    &:last-child {
-      a {
-        margin-right: 0;
-      }
-    }
-  }
-}
 header .logo,
 footer .logo {
-  @include span-columns(4);
   @include media($mobile) {
     @include span-columns(4);
     text-align: center;
   }
   font-size: 2em;
   font-family: 'Great Vibes', sans-serif;
-  margin-top: 0.5em;
 }
 header {
   background: $headerColor;
@@ -144,10 +117,36 @@ header {
     color: #fff;
     &:hover { color: #fff; }
   }
-
   .grid {
     padding-top: 2em;
     padding-bottom: 2em;
+  }
+  .logo {
+    @include span-columns(4);
+  }
+  .links {
+    @include span-columns(8);
+    @include omega();
+    text-align: right;
+    @include media($mobile) {
+      @include span-columns(4);
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      a {
+        margin-right: 1.5em;
+        &:hover {
+          border-bottom: 1px solid;
+        }
+      }
+      &:last-child {
+        a {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 
@@ -159,11 +158,19 @@ footer {
     padding-top: 3em;
     padding-bottom: 3em;
   }
+  .links ul {
+    @include span-columns(3);
+    @include omega();
+  }
+  .logo {
+    @include span-columns(6);
+    margin-top: 0.5em;
+  }
   .external-links {
     clear: both;
-    padding-top: 1em;
+    padding-top: 2em;
     font-size: 1.4em;
-    text-align: right;
+    text-align: center;
 
     li {
       display: inline-block;
@@ -175,7 +182,7 @@ footer {
   }
   .credits {
     margin-top: 1em;
-    text-align: right;
+    text-align: center;
     font-size: 0.9em;
     a { color: #aaa; }
   }
@@ -211,13 +218,9 @@ body > section {
   }
 
   .links {
-    font-size: 1.2em;
+    font-size: 0.9em;
     a {
-      color: #fff;
-      border-bottom: 1px solid;
-      &:hover {
-        color: #eee;
-      }
+      @include button(#fff);
     }
     li {
       display: inline-block;
