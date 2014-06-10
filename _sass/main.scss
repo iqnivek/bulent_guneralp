@@ -195,8 +195,8 @@ body > section {
     box-sizing: border-box;
     background: rgba(lighten($headerColor, 10%), 0.8);
     text-align: center;
-    @include span-columns(8);
-    padding: 12em 2em;
+    @include span-columns(7);
+    padding: 12em 1.5em;
     @include media($mobile) {
       @include span-columns(4);
       padding: 6em 2em;
