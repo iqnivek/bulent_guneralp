@@ -107,6 +107,7 @@ footer .logo {
     @include span-columns(4);
     text-align: center;
   }
+  margin-top: 0.5em;
   font-size: 2em;
   font-family: 'Great Vibes', sans-serif;
 }
@@ -124,17 +125,15 @@ header {
   .logo {
     @include span-columns(4);
   }
-  .links {
-    @include span-columns(8);
+  .links ul {
+    @include span-columns(4);
     @include omega();
-    text-align: right;
     @include media($mobile) {
       @include span-columns(4);
       text-align: center;
     }
 
     li {
-      display: inline-block;
       a {
         margin-right: 1.5em;
         &:hover {
@@ -164,7 +163,6 @@ footer {
   }
   .logo {
     @include span-columns(6);
-    margin-top: 0.5em;
   }
   .external-links {
     clear: both;
@@ -218,17 +216,16 @@ body > section {
   }
 
   .links {
-    font-size: 0.9em;
+    text-align: left;
     a {
-      @include button(#fff);
+      color: #fff;
+      border-bottom: 1px solid;
+      &:hover { color: #ddf; }
     }
-    li {
+    ul {
+      width: 49%;
       display: inline-block;
-      @include media($mobile) {
-        display: block;
-      }
-      margin-right: 0.5em;
-      margin-bottom: 0.5em;
+      vertical-align: top;
     }
   }
 }
