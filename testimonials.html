@@ -4,19 +4,31 @@ title: Testimonials - Bulent Guneralp
 permalink: /testimonials/
 ---
 
-{% include testimonials.html %}
-
-<section class="testimonials">
+<section id="testimonials">
   <div class="grid">
+    <h2>What Students Say</h2>
+
     <section>
-      <h3>More Quotes</h3>
+      <h3>Voice Lessons</h3>
       <ul>
-        {% for quote in site.data.testimonials %}
+        {% for quote in site.data.testimonials.voice %}
           <li>
             <blockquote>{{ quote.quote }}</blockquote>
             <cite>{{ quote.cite }}</cite>
           </li>
-          {% endfor %}
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section>
+      <h3>Piano Lessons</h3>
+      <ul>
+        {% for quote in site.data.testimonials.piano %}
+          <li>
+            <blockquote>{{ quote.quote }}</blockquote>
+            <cite>{{ quote.cite }}</cite>
+          </li>
+        {% endfor %}
       </ul>
     </section>
   </div>
