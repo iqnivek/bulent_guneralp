@@ -254,19 +254,14 @@ body > section {
     &:last-child {
       margin-bottom: 0;
     }
+    @include clearfix;
   }
   h3 {
     text-align: center;
   }
   ul {
-    @include clearfix;
     li {
-      @include span-columns(6);
-      @include omega(2n);
-      @include media($mobile) {
-        @include span-columns(4);
-      }
-      margin-bottom: 1.5em;
+      margin-bottom: 2em;
     }
     strong {
       @include strongHighlight;
